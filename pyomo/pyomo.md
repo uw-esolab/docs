@@ -10,12 +10,9 @@
 ## Operating System(s) and requirements
 * Windows 10
 * Python 3.8+ (miniconda)
-
-## External references and procedures
-
-* [Installing Python with miniconda]()
-* [Installing VS Code]()
-* [Windows admin rights]()
+* This procedure assumes prior installation of [Python](https://github.com/mjwagner2/esolab/blob/main/python/python.md)
+* You may also want to install [VS Code](https://github.com/mjwagner2/esolab/blob/main/vscode/vscode.md)
+* [Source code](https://github.com/mjwagner2/esolab/blob/main/pyomo/mwe.py) for minimal working example
 
 ## Purpose
 Configure Python 3+ installed on a local machine to be used with Pyomo, which is a optimization modeling language developed for compatibility with multiple open-source and commercial solvers, including CPLEX, Gurobi, GLPK, CBC, and others. 
