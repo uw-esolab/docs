@@ -4,20 +4,15 @@
 
 | Last update | Author         | Notes or changes                    |
 |-------------|----------------|-------------------------------------|
+| 2020/10/14  | Wagner         | Moving to markdown format           |
 | 2020/10/13  | Springate      | Initial creation                    |
 
 
 ## Operating System(s) and requirements
 * These instructions are based on Installation for a Windows 10, 64-bit operating system. 
 
-## External references and procedures
-
-* [Installing Python with miniconda]()
-* [Installing VS Code]()
-* [Windows admin rights]()
-
 ## Purpose
-Install Python 3+ on a local machine.
+Installs Python 3+ on a local machine.
 
 ## Procedure
 
