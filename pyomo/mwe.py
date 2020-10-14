@@ -74,5 +74,4 @@ for t in model.T:
 plt.plot([mt for mt in model.T], [mx() for mx in model.x.values()], \
          [mt for mt in model.T], [mx for mx in model.X_in.values()], \
          [0, model.nt()], [model.X0(), model.X0()], 'r--')
-plt.savefig("snip_cbc04.png")
-# plt.show()
+plt.show()
