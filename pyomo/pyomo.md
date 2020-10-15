@@ -132,12 +132,7 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
     plt.show()
     ```
 
-    You should get something that qualitively looks like the following, with values falling below the minimum threshold (50, in this case) forced to zero by the binary variable:   
+    You should get something that qualitively looks like the following. The program considers input (orange) values, and maximizes output values (blue) while requiring that any value below the minimum threshold (the red dotted line at 50, in this case) be forced to zero by the binary variable:   
 
     ![MWE results](./snip_cbc04.png)
 
-
-
-
-
-## Known Issues or Common Problems
