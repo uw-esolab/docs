@@ -27,7 +27,7 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
 
         ![CBC download link from Bintray](./snip_cbc01.png "CBC download link from Bintray")
 
-    1. GLPK ()
+    1. GLPK (tbd)
 
 2. **Extract download files to a temporary folder.** You may not need to use all of the subfolders or extracted files.
 
