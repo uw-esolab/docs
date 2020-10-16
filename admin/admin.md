@@ -52,7 +52,7 @@ Before following this procedure, make sure that the action you're planning to ta
     * Running the process that automatically prompts for admin rights
 
 6. When prompted for your admin credentials, enter:
-    * For username: "<computer name>\administrator"
+    * For username: "computer name\administrator"
     * For password, the password given by LAPS
 
         ![](./image_004.png)    
