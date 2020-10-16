@@ -46,18 +46,16 @@ Installs Python 3+ on a local machine.
 5. Install Common Python Packages
 
     * Open Command Prompt
-    * Follow the commands in the window below. Type “y” to proceed when prompted. 
-
-        ![](./image041.png)
-
-    * Follow the commands in the window below
-
-        ![](./image042.png)
-
-    * Follow the commands in the window below. Type “y” to proceed when prompted
-
-        ![](./image044.png)
-
-    * Follow the commands in the window below. Type “y” to proceed when prompted.
-        ![](./image046.png)
-    
+    * Follow the commands in the window below to install commonly-used packages. Type “y” to proceed when prompted. 
+        ```
+        > conda install numpy
+        > conda install pandas
+        > conda install scipy
+        > conda install matplotlib
+        ```
+        
+    * For projects that require NREL's [PySAM](https://sam.nrel.gov/software-development-kit-sdk/pysam.html) package, add the NREL channel and the PySAM package:
+        ```
+        > conda config --env --append channels nrel
+        > conda install nrel-pysam nrel-pysam-stubs
+        ```
