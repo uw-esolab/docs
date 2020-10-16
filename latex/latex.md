@@ -1,4 +1,4 @@
-# Configuring Python for Pyomo 
+# LaTeX installation and configuration with VS Code
 
 ## Document info
 
@@ -74,7 +74,7 @@
         * You can locate the cursor in the .tex file by holding ``CTRL`` and clicking a position in the PDF
         * Google is your friend. Use Google to learn commands, packages, and debug problems. When in doubt, copy the error and Google it!
 
-# Templates and Examples
+## Templates and Examples
 
 (To be provided soon...)
 
