@@ -51,7 +51,7 @@
     * Search for "latex". Install LaTeX Workshop
         ![](./image_010.png)
 
-    * Open a LaTeX file such as [this minimal example](). 
+    * Open a LaTeX file such as [this minimal example](https://github.com/mjwagner2/esolab/blob/main/latex/mwe.tex). 
 
     * Type ``CTRL+ALT+B`` to build the document. The build may take a few moments the first time as the MikTex package manager updates packages. You should be connected to the internet the first time you build or when using packages that have not been imported before. When building, a small cycling circle will appear on the status bar at the bottom of the window.
 
