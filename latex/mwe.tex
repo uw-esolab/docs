@@ -1,0 +1,37 @@
+\documentclass[letter]{article}
+
+\title{Hello, World!}
+\author{ESOLab}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\maketitle
+
+\section{The main section}
+
+\lipsum[1]. This is shown in Figure~\ref{fig:1}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.25\linewidth]{image_001.png}
+    \caption{A sample figure}
+    \label{fig:1}
+\end{figure}
+
+
+\subsection{A minor point}
+
+\lipsum[4]
+
+\section{Conclusion}
+
+\lipsum[5]
+
+
+\end{document}
