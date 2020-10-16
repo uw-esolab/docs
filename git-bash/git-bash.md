@@ -25,6 +25,7 @@ Install the Git-SCM command window client and Git toolsets on a local machine.
 
 
 3.	A file named “Git-2.28.0-64-bit” will start downloading.
+
     ![](./image026.png)
 
 
@@ -42,32 +43,41 @@ Install the Git-SCM command window client and Git toolsets on a local machine.
         ![](./image030.png)
 
     * Select “Use Visual Studio Code as Git’s default editor”
+    
         ![](./image031.png)
 
     * Select “Use Git from Git Bash only” for adjusting PATH environment
+    
         ![](./image032.png)
 
     * Select “Use the OpenSSL library” for HTTPS transport backend
+    
         ![](./image033.png)
         
     * Select “Checkout Windows-style, commit Unix-style line endings”
+    
         ![](./image034.png)
         
     * Select “Use MinTTY” for terminal emulator to use with Git Bash
+    
         ![](./image035.png)
         
     * Select “Default (fast-forward or merge)” for ‘git pull’ behavior
+    
         ![](./image036.png)
         
     * Select “Git Credential Manager” 
+    
         ![](./image037.png)
 
     * Select “Enable file system caching” for extra options
+    
         ![](./image038.png)
 
     * Install
 
 5. A window like this will open
+
     ![](./image039.png)
 
 6. By default, Git Bash will launch in a folder like "Documents," but you may prefer to have it launch with the current working directory in the place where you store your repositories. To change the default working directory:
