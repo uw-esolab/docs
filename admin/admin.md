@@ -51,10 +51,10 @@ Before following this procedure, make sure that the action you're planning to ta
     * Right clicking an object, then select "Run as administrator" if available
     * Running the process that automatically prompts for admin rights
 
-5. When prompted for your admin credentials, enter:
-    * For username: "<computer name>\administrator"
+6. When prompted for your admin credentials, enter:
+    * For username: "computer name\administrator"
     * For password, the password given by LAPS
 
         ![](./image_004.png)    
 
-6. Complete the task. Admin rights will automatically relinquish after the task completed or the application closed. 
+7. Complete the task. Admin rights will automatically relinquish after the task completed or the application closed. 

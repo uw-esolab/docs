@@ -67,6 +67,7 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
 
     # Create some random input data
     xtmp = {}
+    random.seed(123)
     for t in range(model.nt()):
         xtmp[t] = random.uniform(0,100)
 
