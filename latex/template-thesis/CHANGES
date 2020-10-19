@@ -1,0 +1,12 @@
+20201019: Revised document for use with ESOLab (Wagner)
+
+20122803: added section for committee members on title page; need to have latest version of geometry package installed for it to work.
+
+20081112: Made almost every dependency optional; packaged enumitem for
+convenience.
+
+r4 (esolab internal version)
+
+r3 (public; 20080903):  Initial public release
+
+r132 (internal; 20080903):  Initial release.

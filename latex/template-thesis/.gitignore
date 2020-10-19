@@ -1,0 +1,9 @@
+#Git ignore files
+*.aux
+*.idx
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc

@@ -1,0 +1,99 @@
+%!TEX TS-program = pdflatex
+% dissertation.tex -- main dissertation file
+%
+% Wisconsin dissertation template
+% Copyright (c) 2008-2009 William C. Benton.  All rights reserved.
+%
+% This program can redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN
+% archives in directory macros/latex/base/lppl.txt; either
+% version 1 of the License, or (at your option) any later version.
+%
+% This program includes other software that is licensed under the
+% terms of the LPPL and the Perl Artistic License; see README for details.
+%
+% You, the user, still hold the copyright to any document you produce
+% with this software (like your dissertation).
+%
+
+%%% You'll want ``oneside'' for the deposit version, but probably not for any versions that don't need to meet the UW requirements
+\documentclass[12pt,oneside,letterpaper]{memoir}
+
+\input{includes/preamble}
+\input{includes/defs}
+\input{includes/thesisdefs}
+\svnidlong{$LastChangedBy$}{$LastChangedRevision$}{$LastChangedDate$}{$HeadURL: http://freevariable.com/dissertation/branches/diss-template/dissertation.tex $} 
+
+
+\clearpage\pagenumbering{roman}  % This makes the page numbers Roman (i, ii, etc)
+
+\title{A Study and Analysis of An Important Problem}
+\author{Buckingham B.~Badger}
+\department{Mechanical Engineering}
+\oralexamdate{12/10/2020}
+\committeeone{Iam A. Professor, Professor, Mechanical Engineering}
+\committeetwo{Commit E. Member, Professor, Material Science \& Engineering}
+\committeethree{We B. Advising, Assistant Professor, Mechanical Engineering}
+\committeefour{G. D. Brilliant, Associate Professor, Mechanical Engineering}
+\committeefive{Will I. Pass, Associate Professor, Chemical Engineering}
+
+% if you use any additional committe members you will need to uncomment
+% the corresponding lines 107 and/or 108 in thesisdef.tex You may also need
+% to adjust the value for \newcommand\@thesistitlemedskip{0.25in} and 
+% \newcommand\@thesistitlebigskip{0.55in} in line 32 to get it to all fit
+%\committeesix{Iam A. Professor, Associate Professor, Geography}
+%\committeeseven{Iam A. Professor, Professor, Computer Sciences}
+
+
+\date{2020}
+
+\begin{document}
+
+%%% Uncomment the following if your .bib contains references that you will not 
+%%% explicitly cite, but that should be in the final bibliography:
+% \nocite{*}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\newgeometry{left=1in,right=1in,bottom=1in,top=1in}
+\maketitle
+\restoregeometry %sets the margins back to normal
+
+%% Add \part declarations if you want, but it's not necessary
+%\part{Preliminaries}
+
+\include{frontmatter/frontmatter}
+
+%% Now include the tex files for each chapter, like so (I put these in separate dirs): 
+\include{intro/intro}
+\include{intro/litreview}
+\include{research/outcome_one}
+\include{research/outcome_two}
+\include{research/outcome_three}
+\include{summary/conclusions}
+\include{summary/future}
+
+%% etc, etc.
+
+%% Do you have appendices?  If so, add them here, just like chapters.
+% \begin{appendices}
+% \include{backmatter/appendix1}
+% \end{appendices}
+
+%% Are you a big nerd with a colophon?  Add it here.
+% \begin{colophon}
+% \input{backmatter/colophon}
+% \end{colophon}
+
+%% McBride is a very nice style (some version is included in this distribution)
+\bibliographystyle{mcbride}
+\bibliography{biblio.bib}
+
+%% Want an index?  Neither did I.
+%\printindex
+
+\end{document}
