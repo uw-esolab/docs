@@ -76,8 +76,9 @@
 
 ## Templates and Examples
 
-(To be provided soon...)
+(Some to be provided soon...)
 
+* [Masters or PhD thesis](https://github.com/mjwagner2/esolab/tree/main/latex/template-thesis)
 * Quarterly report for a funding agency
 * Technical presentation
 * Journal paper
