@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[xcolor = {usenames,dvipsnames,table}, handout]{beamer}
+
+\documentclass[xcolor = {usenames,dvipsnames,table},aspectratio=169]{beamer}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\usepackage{ulem}
+\usepackage{breqn}
+%\usepackage{subcaption}
+%\captionsetup{compatibility=false}
+%\usepackage{bbding}
+\usepackage{ wasysym }
+%\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}   %[noend]
+\usepackage{epstopdf}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}                   
+\usetikzlibrary{shadows}
+\usepackage{colortbl}
+\usepackage{adjustbox}
+\usepackage[numbers]{natbib}
+\usepackage{nicefrac}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \b	ottomrule in tables
+\usepackage{xspace}
+\usepackage{setspace}
+
+%--- Table column commands with specified widths:
+\usepackage{tabularx}
+% L		left-aligned
+% C		centered
+% R		right-aligned
+\newcolumntype{L}[1]%
+{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]%
+{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]%
+{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+% User commands
+\newcommand{\citeauth}[1]{\citeauthor{#1} (\citeyear{#1})\xspace}
+\newcommand{\rtb}{$\blacktriangleright$\xspace}
+\newcommand*{\cmark}{\color{Green}$\checkmark$}%
+\newcommand*{\xmark}{\color{Red}\large\textbf{\textit{$x$}}}%
+\newcommand{\degc}{$^\circ$C\xspace}
+\newcommand{\onm}{O\&M\xspace}
+\newcommand{\scotu}{s-CO$_2$\xspace}
+\newcommand{\st}{\text{subject to: }}
+\newcommand{\zapspace}{\topsep=0pt\partopsep=0pt\itemsep=0pt\parskip=0pt}
+%macro for specifying white vertical rule in tables. Replace | with !{\wl}
+\newcommand{\wl}{\color{white}\vrule width 1.5pt}
+%checkmarks for table
+\newcommand{\bchk}{\Large$\checkmark$}
+\newcommand{\gchk}{\textcolor{green!70!black}{\bchk}}
+
+
+\mode<presentation> {
+
+  \usetheme{CambridgeUS}
+  \usecolortheme{seahorse}
+
+  \setbeamertemplate{itemize item}{$\blacktriangleright$}
+  \setbeamertemplate{itemize subitem}{--}
+  \setbeamertemplate{itemize subsubitem}{$\bullet$}
+
+  \newcommand{\smallitems}{
+    \setbeamertemplate{itemize/enumerate body begin}{\small}
+    \setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
+  }
+
+  \newenvironment<>{postit}[1]%
+    {\begin{block}{\vspace{-3ex}}#1}%
+    {\end{block}} 
+
+  \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+
+\graphicspath{{./figures/}}
+
+%--- definitions
+%\setbeamercolor{block title}{use=structure,fg=white,bg=YellowOrange!80!Gray}
+%\setbeamercolor{block body}{use=structure,fg=black,bg=YellowOrange!25!white}
+
+%================================================================
+\definecolor{uwred}{HTML}{C5050C}
+\definecolor{uwreddark}{HTML}{9b0000}
+\definecolor{uwpagebg}{HTML}{f7f7f7}
+\definecolor{uwgrayblue}{HTML}{dadfe1}
+\definecolor{uwgraydarker}{HTML}{646569}
+\definecolor{uwgraydarkest}{HTML}{282728}
+\definecolor{uwbodyfont}{HTML}{494949}
+
+\setbeamercolor{palette primary}{bg=uwreddark,fg=white}
+\setbeamercolor{palette secondary}{bg=uwgrayblue,fg=uwgraydarker}
+\setbeamercolor{palette tertiary}{bg=uwred,fg=white}
+\setbeamercolor{palette quaternary}{bg=uwgraydarker,fg=white}
+\setbeamercolor{structure}{fg=uwreddark}
+\setbeamercolor{section in toc}{fg=uwgraydarkest} % TOC sections
+\setbeamercolor{normal text}{fg=uwbodyfont, bg=uwpagebg}
+\setbeamercolor{frametitle}{fg=uwgraydarker, bg=uwgrayblue}
+\setbeamercolor{block body}{fg=uwgraydarker, bg=white}
+\setbeamercolor{block title}{fg=uwred, bg=uwgrayblue}
+
+
+% -----------------------------------------------------------------
+\newcommand{\titlecolor}{\usebeamercolor[fg]{title in head}}
+\newcommand{\sectioncolor}{\color{structure}}
+%\rowcolors{1}{author in head/foot.bg}{date in head/foot.bg}
+\rowcolors{1}{uwgrayblue!60!white}{uwgrayblue}
+\newcommand{\trhead}{\rowcolor{uwgraydarker}} 
+\newcommand{\thf}{\bf\color{white}}
+
+\renewcommand{\sectionpage}{
+	\frame[noframenumbering]{\titlecolor \huge \insertsection}
+}
+\renewcommand{\subsectionpage}{
+	\frame[noframenumbering]{\titlecolor \huge \insertsection \\ \vspace{.25in}\sectioncolor \Large \insertsubsection}
+}
+\usepackage{appendixnumberbeamer}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\makeatletter
+\let\inserttitle\@title
+\makeatother
+
+% The short title [] appears at the bottom of every slide, the full title is only on the title page
+\title[XYZ Seminar]{An Interesting Thing I Did} 
+\subtitle{On a Nice Day at the Terrace}
+
+\author[Wagner]{Mike Wagner, PhD}
+\date{\today} %{June 6\textsuperscript{th}, 2019}
+\institute[UW-Madison]{ %
+University of Wisconsin-Madison
+}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+{
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{title_slide}} 
+\begin{frame}
+  %\titlepage % Print the title page as the first slide
+  \setstretch{1.3}
+	\centering
+  \vspace{0.15\textheight}
+  \begingroup
+  \color{white} \Huge
+  \inserttitle \par
+  \LARGE
+  \vspace*{.5ex}\insertsubtitle 
+  \endgroup
+
+	%\includegraphics[width=0.8\textwidth]{CSM-logo}
+	\vspace{0.15\textheight} %\hspace{0.6\linewidth}
+	\begin{minipage}{0.8\linewidth}
+  % \raggedright 
+  \centering \large 
+  \color{white} 
+    \insertinstitute \par 
+
+		\insertauthor \par
+    
+    \insertdate \par 
+
+	\end{minipage}
+\end{frame}
+}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,draft=false]{images/title_slide}} 
+%\begin{frame}
+%\titlepage % Print the title page as the first slide
+%\end{frame}
+%}
+%
+% \usebackgroundtemplate{\includegraphics[width=\paperwidth, height=\paperheight,draft=false]{standard_slide}}
+%
+%\setbeamertemplate{frametitle}{\vskip6pt\bfseries\insertframetitle}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+
+\newenvironment{blocki}[1]{%
+  \setbeamercolor{block body}{use=structure,fg=black,bg=uwgrayblue}
+  \setbeamercolor{block title}{use=structure,fg=white,bg=uwreddark}
+  \begin{block}{#1}}{\end{block}}
+
+% \newenvironment{blockii}[1]{%
+%   \setbeamercolor{block body}{use=structure,fg=black,bg=nrelslate!40}
+%   \setbeamercolor{block title}{use=structure,fg=white,bg=nrelslate}
+%   \begin{block}{#1}}{\end{block}}
+
+% \newenvironment{blockiii}[1]{%
+%   \setbeamercolor{block body}{use=structure,fg=black,bg=nrelorange!40}
+%   \setbeamercolor{block title}{use=structure,fg=black,bg=nrelorange}
+%   \begin{block}{#1}}{\end{block}}
+
+
+
+
+\captionsetup{justification=centering}
+
+% Separate sections with \sectionpage
+
+\input{slides}
+
+% Uncomment the following if using a bibliography
+%%------------------------------------------------
+\begin{frame}[allowframebreaks]
+  {References}
+\footnotesize
+\bibliographystyle{unsrtnat} %abbrvnat}
+\bibliography{library}
+\end{frame}
+%%------------------------------------------------
+
+
+\end{document} 
