@@ -15,6 +15,17 @@
 * Install a LaTeX compiler using the MikTex distributable option, and configure VS Code to edit, compile, and view LaTeX documents.
 * Provide links to useful LaTeX templates
 
+## Templates and Examples
+
+
+* [Masters or PhD thesis](https://github.com/mjwagner2/esolab/tree/main/latex/template-thesis)
+* [Technical presentation](https://github.com/mjwagner2/esolab/tree/main/latex/template-presentation)
+
+More to be provided soon...
+* Quarterly report for a funding agency
+* Journal paper
+* Homework writeup
+
 ## Procedure
 
 ### Windows 10
@@ -74,12 +85,4 @@
         * You can locate the cursor in the .tex file by holding ``CTRL`` and clicking a position in the PDF
         * Google is your friend. Use Google to learn commands, packages, and debug problems. When in doubt, copy the error and Google it!
 
-## Templates and Examples
 
-(Some to be provided soon...)
-
-* [Masters or PhD thesis](https://github.com/mjwagner2/esolab/tree/main/latex/template-thesis)
-* Quarterly report for a funding agency
-* Technical presentation
-* Journal paper
-* Homework writeup

@@ -18,29 +18,48 @@
 %	PACKAGES AND THEMES
 %----------------------------------------------------------------------------------------
 
+% Underline and emphasize text
 \usepackage{ulem}
+% Allow equation breaks
 \usepackage{breqn}
-%\usepackage{subcaption}
-%\captionsetup{compatibility=false}
+% Symbols and math characters
 %\usepackage{bbding}
 \usepackage{ wasysym }
+\usepackage{amsmath, amssymb}
+% Include raw PDF pages in the document
 %\usepackage{pdfpages}
+% Allow merging of cells across multiple rows of a table
 \usepackage{multirow}
+% Format captions
 \usepackage{caption}
+% Support pseudocode algorithms
 \usepackage{algorithm}
 \usepackage{algpseudocode}   %[noend]
+% Convert EPS graphics to pdf format
 \usepackage{epstopdf}
-\usepackage{amsmath, amssymb}
+% Include the tikz library for drawing graphics and charts manually
 \usepackage{tikz}                   
 \usetikzlibrary{shadows}
+% Table cell and row coloring
 \usepackage{colortbl}
+% 
 \usepackage{adjustbox}
+% Natbib bibliography support with 'numbers' 
 \usepackage[numbers]{natbib}
+% Option to format math fractions inline
 \usepackage{nicefrac}
-\usepackage{graphicx} % Allows including images
-\usepackage{booktabs} % Allows the use of \toprule, \midrule and \b	ottomrule in tables
+% Allows including images
+\usepackage{graphicx} 
+% Allows the use of \toprule, \midrule and \b	ottomrule in tables
+\usepackage{booktabs} 
+% Spacing in macros and commands
 \usepackage{xspace}
+% Specify line spacing 
 \usepackage{setspace}
+% Present text 'verbatim' on the slide
+\usepackage{verbatim}
+% Better appendix numbering for beamer
+\usepackage{appendixnumberbeamer}
 
 %--- Table column commands with specified widths:
 \usepackage{tabularx}
@@ -132,12 +151,19 @@
 \newcommand{\thf}{\bf\color{white}}
 
 \renewcommand{\sectionpage}{
-	\frame[noframenumbering]{\titlecolor \huge \insertsection}
+  \begingroup
+    \usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{section_slide}} 
+    \setbeamertemplate{footline}{}%
+    \setbeamertemplate{headline}{}%
+    \frame[noframenumbering]{%
+      \centering 
+      \titlecolor \huge \insertsection%
+      }
+  \endgroup
 }
 \renewcommand{\subsectionpage}{
 	\frame[noframenumbering]{\titlecolor \huge \insertsection \\ \vspace{.25in}\sectioncolor \Large \insertsubsection}
 }
-\usepackage{appendixnumberbeamer}
 
 
 %----------------------------------------------------------------------------------------

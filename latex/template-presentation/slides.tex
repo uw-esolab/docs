@@ -11,7 +11,7 @@
 
 % ----------------------------------------------------------------
 \begin{frame}
-    \frametitle{Their work is incomplete}
+    \frametitle{Other people have done work}
 
     \begin{columns}
         \column{0.5\linewidth}
@@ -24,7 +24,7 @@
                 \item First task
                 \item Second task
                 \item Third task
-                \item Four
+                \item Fourth
             \end{enumerate}
 
     \end{columns}
@@ -35,11 +35,11 @@
 
 % ----------------------------------------------------------------
 % ----------------------------------------------------------------
-\section{New work}
+\section{New work} \sectionpage
 
 % ----------------------------------------------------------------
 \begin{frame}
-    \frametitle{My work is helpful}
+    \frametitle{I have also done some work}
 
     \begin{columns}
 
@@ -47,8 +47,8 @@
         \column[c]{0.6\linewidth}
 
             \begin{blocki}
-                {Callout of main idea}
-                Text to support it, and Plank's law \citep{planck1914theory} in Eq.~\ref{eq:1} to boot:
+                {Here is an important idea or proof}
+                Plank's law is cited \citep{planck1914theory} and reproduced in Eq.~\ref{eq:1}:
 
                 \begin{equation}
                     \int_0^\infty E_{b,\lambda} d\lambda = \frac{C_1}{\lambda^5 \left[ \exp\left( \frac{C_2}{\lambda \cdot T} \right) - 1 \right]}  
@@ -62,7 +62,7 @@
 
             \begin{itemize}
                 \item Here's a list
-                \item With many items
+                \item With a few items
                 \item To guide the talk
             \end{itemize}
 
@@ -72,3 +72,44 @@
 \end{frame}
 % ----------------------------------------------------------------
 
+
+% ----------------------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{A table is necessary}
+
+    \begin{columns}
+        \column{0.5\linewidth}
+        
+            \centering 
+        
+            \begin{table}
+                \caption{This is a sample table. Note the format specifiers on the header row!}
+                \label{tab:1}
+                % Separate columns with a white line using macro '!{\wl}' instead of '|'
+                \begin{tabular}{L{1in} !{\wl} c  c}
+                    \trhead \thf Description & \thf Units & \thf Value \\
+                    Flux & $\nicefrac{W}{m^2}$ & 100.0 \\
+                    Cost & \$ & 13,000,000 \\
+                    Specific heat of the third to last fluid which has a very long wrapped label &
+                        $\frac{kJ}{kg \cdot K}$ & 985 \\
+                \end{tabular}
+            \end{table}
+
+        \column{0.4\linewidth}
+
+            Here is the code for the \texttt{tabular} environment:
+
+            \tiny
+
+            \begin{verbatim}
+\begin{tabular}{L{1in} !{\wl} c  c}
+    \trhead \thf Description & \thf Units & \thf Value \\
+    Power & $W$ & 1000 \\
+    ...
+\end{tabular}
+            \end{verbatim}
+        
+    \end{columns}
+
+\end{frame}
+% ----------------------------------------------------------------
