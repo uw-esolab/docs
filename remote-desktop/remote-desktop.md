@@ -1,4 +1,4 @@
-# Elevate to Administrator on a Local Lab Workstation or Desktop
+# Connect to a Lab Desktop Remotely
 
 ## Document info
 
