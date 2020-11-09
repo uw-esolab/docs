@@ -87,13 +87,12 @@ Keep in mind that your graduate research is likely much broader and of longer du
 |---------|-------------|---------------|
 | `--help` | View help docs for a particular command | `> git <command> --help` |
 | `clone` | Copy files from a central repository to your local machine | `> git clone https://github.com/uw-esolab/<my repo name>.git` | 
-| `pull` | Collect changes that have been published to the central repository and replicate them on your local copy of the repo | `> git pull` |
 | `checkout` (branch) | Switch your local repo to reflect the most recent version of another branch in the repo. | `> git checkout my-branch`<br>or<br>`> git checkout -b my-new-branch` <br>to create and switch to a new branch|
 | `checkout` (file) | Discard local changes and restore a file to the version last collected from the server | `> git checkout ./path/to/my-modified.py`|
 | `remote` | Report a list of known remote servers and their local alias | `> git remote -v`|
 | `add` | Select file(s) or specific changes for inclusing in an upcoming commit | `> git add ./path/to/myfile.py` <br>or <br>`> git add /.` |
 | `fetch` | Collect changes from the remote server named "origin" with branch "main," but do not update the local repo | `> git fetch origin main` | 
-| `pull` | Collect changes from the remote server named "origin" with branch "main," and update the local repo | `> git pull origin main` | 
+| `pull` | Collect changes from the remote server named "origin" with branch "main," and implement changes on the local repo | `> git pull origin main` | 
 | `commit` | Record changes to files ("add"ed files only) | `> git commit -m "note describing this commit"` |
 | `push` | Publish one or more commits to a remote server named "origin" on branch "main" | `> git push origin main` |
 | `status` | Report the current state of the local repo, including files changed, current branch, commits ahead/behind, etc. | `> git status` |
