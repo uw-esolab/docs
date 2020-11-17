@@ -46,6 +46,10 @@ Before following this procedure, make sure that the action you're planning to ta
     ![](./image_003.png)
 
     * Enter the computer name as it appears from step 2 and click "Search". A password and expiration date should appear. 
+    * If the dialog returns a message that the computer name is ambiguous, you may need to enter the full device name string with all attributes. To do this, copy the following text and paste the full string into the name field, replacing the computer name after 'CN' with your computer name from step 2.
+      ```
+      CN=WAGNERLAB-01,OU=Grad,OU=Wagner Lab,OU=Mechanical Engineering,OU=orgUnits,DC=ad,DC=engr,DC=wisc,DC=edu
+      ```
 
 4. Execute the command requiring admin rights. This can be done by:
     * Right clicking an object, then select "Run as administrator" if available
