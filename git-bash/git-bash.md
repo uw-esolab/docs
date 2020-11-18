@@ -4,6 +4,7 @@
 
 | Last update | Author         | Notes or changes                    |
 |-------------|----------------|-------------------------------------|
+| 2020/11/18  | Wagner         | Viewing committed changes in VS Code|
 | 2020/11/09  | Wagner         | Adding guidance for Git usage       |
 | 2020/10/14  | Wagner         | Moving to markdown format           |
 | 2020/10/13  | Springate      | Initial creation                    |
@@ -15,6 +16,8 @@
 
 ## Purpose
 1. Learn how to use Git
+    * Use of Git SCM
+    * View changes to files [in VS Code](#viewing-changes-to-your-files-in-vs-code) or on GitHub
 2. Install the Git-SCM command window client and Git toolsets on a local machine.
 
 ***
@@ -191,8 +194,25 @@ Begin by opening Git Bash. Each command needs to be typed in to the command wind
     ![](./image106.png)
 
 * Visit the [GitHub repo](https://github.com/uw-esolab/demo/commits/main). Your commits should now be visible!
+
     ![](./image107.png)
 
+### Viewing changes to your files in VS Code
+
+Another option for viewing the history of changes made to your code is to use the VS Code editor. If you open a folder or file that is part of a tracked Git repository in VS Code, you can view side-by-side subsequent versions of the file. To do this:
+* Expand the explorer tab on the left hand side of VS Code
+
+    ![](./image108.png)
+
+* At the bottom of the window, you should see a "Timeline" toggle. Expand this sub-window
+
+    ![](./image109.png)
+
+    This window shows the timeline of commits that you've made that involve changes to the file selected in the explorer tab. 
+
+* To view changes, click one of the commits in the window. The editor will show side-by-side the contents of the file before and after the committed changes.
+
+    ![](./image110.png)
 
 
 ******
