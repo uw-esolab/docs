@@ -20,26 +20,61 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
 ## Procedure
 
 ### Windows 10
-1. **Download binaries for the appropriate solver.** These are used by Pyomo when solving the optimization problem
-    1. CBC (COIN-OR): 
+1. **Download and install the appropriate solver**
+    1. **For CBC or GLPK solver:**
+        1. **Download binaries for the appropriate solver.** These are used by Pyomo when solving the optimization problem
+            1. CBC (COIN-OR): 
 
-        The direct link for the most recent download as of this date is [here](). The link to the Bintray webpage is [here](https://bintray.com/coin-or/download/Cbc). Locate the most recent distributable that is compatible with your system. For example:
+                The direct link for the most recent download as of this date is [here](). The link to the Bintray webpage is [here](https://bintray.com/coin-or/download/Cbc). Locate the most recent distributable that is compatible with your system. For example:
 
-        ![CBC download link from Bintray](./snip_cbc01.png "CBC download link from Bintray")
+                ![CBC download link from Bintray](./snip_cbc01.png "CBC download link from Bintray")
 
-    1. GLPK (tbd)
+            1. GLPK (tbd)
 
-2. **Extract download files to a temporary folder.** You may not need to use all of the subfolders or extracted files.
 
-3. **Locate the executable (.exe) and dynamic link library (.dll) files**, likely in a "bin" folder. These are the binary files that execute the solver. The CBC solver files are located in the /bin/ folder as shown below:
-    ![CBC binary files](./snip_cbc02.png)
 
-4. **Copy the binaries to the Python Scripts folder.** Navigate to your Python installation folder. This may be:
-    `C:\ProgramData\Miniconda3\Scripts\`  
-    `C:\Python38\Scripts\`
+        2. **Extract download files to a temporary folder.** You may not need to use all of the subfolders or extracted files.
 
-    You can locate the python installation folder by opening a command window and executing:  
-    `> where python`
+        3. **Locate the executable (.exe) and dynamic link library (.dll) files**, likely in a "bin" folder. These are the binary files that execute the solver. The CBC solver files are located in the /bin/ folder as shown below:
+            ![CBC binary files](./snip_cbc02.png)
+
+        4. **Copy the binaries to the Python Scripts folder.** Navigate to your Python installation folder. This may be:
+            `C:\ProgramData\Miniconda3\Scripts\`  
+            `C:\Python38\Scripts\`
+
+            You can locate the python installation folder by opening a command window and executing:  
+            `> where python`
+
+    2. **For Gurobi:**
+        1. Make an account on Gurobi using your University email ID. The link to the page is [here](https://www.gurobi.com/).
+            ![](./Picture1_Gurobi.png)
+
+        2. Click on “Gurobi Optimizer”
+        3. Accept the End User License Agreement
+            ![](./Picture2_Gurobi.png)
+        4. Download the appropriate version
+            ![](./Picture3_Gurobi.png)
+        5. Run the installer 
+            ![](./Picture4_Gurobi.png)
+        6. Click on "Next"
+            ![](./Picture5_Gurobi.png)
+            ![](./Picture6_Gurobi.png)
+        7.Choose the folder in which you would like to install Gurobi
+            ![](./Picture7_Gurobi.png)
+        8. Click on Install and Run as Administrator
+            ![](./Picture8_Gurobi.png)
+            ![](./Picture9_Gurobi.png)
+        9. Go to "Downloads & Licenses" and click "Academic License"
+            ![](./Picture14_Gurobi.png)
+        10. You will be directed to a page with a license number.
+            ![](./Picture15_Gurobi.png)
+        11. Scroll down to find a key
+            ![](./Picture16_Gurobi.png)
+        12. Open command prompt and type in the key “grbgetkey 6a6e2fba-2e54-11eb…….”
+        13. You will be asked to choose the directory in which the license key file should be downloaded. Enter the same directory as the one in which you installed Gurobi.
+        14. Gurobi will automatically detect the license
+
+
 
 5. **Install Pyomo.** Pyomo is best installed via `pip` or `conda` in the command window. 
     1. Open a command window (with admin rights, if you installed Python using admin rights). 
@@ -105,6 +140,7 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
     # ------ solve and print out results
     #solver setup
     #solver = pyomo.SolverFactory('glpk')
+    #solver = pyomo.SolverFactory('gurobi')
     solver = pyomo.SolverFactory('cbc')
     res = solver.solve(model)
 
