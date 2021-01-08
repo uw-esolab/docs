@@ -210,6 +210,12 @@ The Eclipse IDE can be used to run/debug both Python scripts and C++ files.
 
 With Eclipse properly set up, we can now run and debug Python scripts that called the `libsscd.so` share object file.
 
+0. There might be some permissions problems when using "Attach to Process." In an open terminal, enter
+
+	> `echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope`
+	
+	to temporarily grant permissions. You can permanently fix this by changing the contents of that file, but that scares me.
+
 1. Open the `<project_name>.py` file  and set a breakpoint around Line 257, where `ssc.module_exec(module,data)` is called
 	
 2. Open the appropriate `cmod` C++ file. In this particular case it is the `cmod_tcsmolten_salt.cpp` file
@@ -226,7 +232,7 @@ With Eclipse properly set up, we can now run and debug Python scripts that calle
 	
 	- The breakpoint in the `<project_name>.py` file should catch, pausing in the *Console* tab as shown (note the printed PID)
 	
-	![First Breakpoint in main Python script][python_firstBreakpoint]{width=110%}
+	![First Breakpoint in main Python script][python_firstBreakpoint]
 	
 4. Begin **C++** debugging session
 
@@ -234,19 +240,19 @@ With Eclipse properly set up, we can now run and debug Python scripts that calle
 	
 	- An *Attach to Process* window should pop up. Enter the Python PID noted previously and click *OK*
 	
-	![Attach to Process][python_attachToProcess]{width=60%}
+	![Attach to Process][python_attachToProcess]
 	
 	- `libsscd` should show up in the Debug window, with `python3` and `gdb` tabs. Highlight the *Thread* under `python3` tab that reads "Running: User Request"
 	
 	- Switch from *Console* to *Debugger Console* below, where there should be a `(gdb)` line waiting for input. Enter 'c' (for 'continue')
 	
-	![C++ debugger console][cpp_debuggerConsole]{width=100%}
+	![C++ debugger console][cpp_debuggerConsole]
 	
 	- Highlight `<module>[<project_name>]` underneath the `sampydev` run in the Debug window and press `F8` to continue the debugging session
 	
 	- The breakpoint in `cmod_tcsmolten_salt.cpp` file should catch. Happy debugging!
 	
-	![First Breakpoint in C++][cpp_firstBreakpoint]{width=110%}
+	![First Breakpoint in C++][cpp_firstBreakpoint]
 	
 [python_firstBreakpoint]: eclipse_python_firstBreakpoint.png
 [python_attachToProcess]: eclipse_python_attachToProcess.png
