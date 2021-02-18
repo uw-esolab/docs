@@ -115,7 +115,7 @@ In `SAM` Desktop,
 	
 		> `pid = os.getpid()`
 		
-		> `print('PID = '.pid)`
+		> `print('PID = ',pid)`
 	
 	- make sure all resource files have the correct address
 
