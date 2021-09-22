@@ -57,38 +57,19 @@ function [F_AB, varargout] = viewFactor(TRI_A, TRI_B, varargin)
 tStart = cputime;
 global almostZero
 almostZero = 1e-7;
+halfTol = almostZero/2;
 
 plotPolygons = false;
 monteCarlo = false;
 
 if nargin > 2
     for i=3:nargin
-        if (ischar(varargin{i-2})) & (length(varargin{i-2}) == 4) ...
-                & ((varargin{i-2} == 'plot') ...
-                | (varargin{i-2} == 'PLOT') ...
-                | (varargin{i-2} == 'Plot'))
-            
-            plotPolygons = true;
-%             break;
-        end
-        
-        if (ischar(varargin{i-2})) & (length(varargin{i-2}) == 2) ...
-                & ((varargin{i-2} == 'mc') ...
-                | (varargin{i-2} == 'MC') ...
-                | (varargin{i-2} == 'Mc'))
-            
-            monteCarlo = true;
-%             break;
-        end
-        
-        if (ischar(varargin{i-2})) & (length(varargin{i-2}) == 10) ...
-                & ((varargin{i-2} == 'monteCarlo') ...
-                | (varargin{i-2} == 'MONTECARLO') ...
-                | (varargin{i-2} == 'montecarlo') ...
-                | (varargin{i-2} == 'MonteCarlo'))
-            
-            monteCarlo = true;
-%             break;
+        switch lower(varargin{i-2})
+            case 'plot'
+                plotPolygons = true;
+            case {'mc','montecarlo','monte carlo'}
+                monteCarlo = true;
+            otherwise
         end
     end
 end
@@ -212,9 +193,9 @@ if ~monteCarlo
             end
 
             % check for coincident vertices - nudge polygon B vertices if found
-            if (r_i == r_p) | (r_j == r_p)
+            if norm(r_i - r_p) < halfTol || norm(r_j - r_p) < halfTol
                 r_p = r_p + almostZero;
-            elseif (r_i == r_q) | (r_j == r_q)
+            elseif norm(r_i - r_q) < halfTol || norm(r_j - r_q) < halfTol
                 r_q = r_q + almostZero;
             end
 
