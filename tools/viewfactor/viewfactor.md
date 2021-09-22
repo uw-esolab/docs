@@ -1,4 +1,4 @@
-# viewFactor.m
+# [viewFactor.m](https://github.com/uw-esolab/docs/blob/main/tools/viewfactor/viewFactor.m)
 ## Radiation view factors between two arbitrary 3D triangles.
 
 ```viewFactor(TRI_A, TRI_B)``` analytically computes the view factor from `TRI_A` to `TRI_B`. Input arguments are in the form of 2x3 or 3x3 arrays,  where each row corresponds to a vertex of the triangle, the the columns refer to the X,Y,Z coordinates of the vertices. If Z coordinates are  omitted, they are assumed to be zero.
