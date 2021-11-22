@@ -25,7 +25,7 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
     1. **For CBC solver:**
         1. **Download binaries for CBC (COIN-OR).** These are used by Pyomo when solving the optimization problem.
 
-                The direct link for the most recent download as of this date is [here](https://www.coin-or.org/download/binary/Cbc/Cbc-master-win64-msvc16-mt.zip). If your system is not Windows/64-bit, the link to the binary hosting webpage is [here](https://www.coin-or.org/download/binary/Cbc/?C=M;O=D). Locate the most recent distributable that is compatible with your system. 
+            The direct link for the most recent download as of this date is [here](https://www.coin-or.org/download/binary/Cbc/Cbc-master-win64-msvc16-mt.zip). If your system is not Windows/64-bit, the link to the binary hosting webpage is [here](https://www.coin-or.org/download/binary/Cbc/?C=M;O=D). Locate the most recent distributable that is compatible with your system. 
 
                 
             
