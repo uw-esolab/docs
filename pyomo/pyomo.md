@@ -4,7 +4,7 @@
 
 | Last update | Author         | Notes or changes                    |
 |-------------|----------------|-------------------------------------|
-| 2021/11/21  | Wagner         | Updating CBC links                  |
+| 2021/11/22  | Wagner         | Updating CBC docs                   |
 | 2020/10/13  | Wagner         | Initial creation                    |
 
 
@@ -22,16 +22,13 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
 
 ### Windows 10
 1. **Download and install the appropriate solver**
-    1. **For CBC or GLPK solver:**
-        1. **Download binaries for the appropriate solver.** These are used by Pyomo when solving the optimization problem
-            1. CBC (COIN-OR): 
+    1. **For CBC solver:**
+        1. **Download binaries for CBC (COIN-OR).** These are used by Pyomo when solving the optimization problem.
 
-                The direct link for the most recent download as of this date is [here](https://www.coin-or.org/download/binary/Cbc/Cbc-master-win64-msvc16-mt.zip). The link to the binary hosting webpage is [here](https://www.coin-or.org/download/binary/Cbc/?C=M;O=D). Locate the most recent distributable that is compatible with your system. 
+                The direct link for the most recent download as of this date is [here](https://www.coin-or.org/download/binary/Cbc/Cbc-master-win64-msvc16-mt.zip). If your system is not Windows/64-bit, the link to the binary hosting webpage is [here](https://www.coin-or.org/download/binary/Cbc/?C=M;O=D). Locate the most recent distributable that is compatible with your system. 
+
                 
-            1. GLPK (tbd)
-
-
-
+            
         2. **Extract download files to a temporary folder.** You may not need to use all of the subfolders or extracted files.
 
         3. **Locate the executable (.exe) and dynamic link library (.dll) files**, likely in a "bin" folder. These are the binary files that execute the solver. The CBC solver files are located in the /bin/ folder as shown below:
@@ -43,6 +40,23 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
 
             You can locate the python installation folder by opening a command window and executing:  
             `> where python`
+
+        5. CBC solver options are set using the same conventions as the command line interface, which are [documented here](https://projects.coin-or.org/CoinBinary/export/1059/OptimizationSuite/trunk/Installer/files/doc/cbcCommandLine.pdf). You can view option documentation through the command line interface. To do this, open a command line window in the folder containing the `cbc.exe` solver. Enter the command `cbc`.
+
+            List the available commands by typing `?`. 
+            
+            Choose a command and type it's name followed by `??` to get full documentation. For example, the command `cutD??` yields: 
+
+            ![CBC binary files](./snip_cbc02-1.png)
+
+
+            In pyomo, enter the solver option and setting as follows, using the time limit "sec" as an example:
+            ```
+            solver = pyomo.SolverFactory('cbc')
+            solver.options['sec'] = 5
+            ```
+            
+
 
     2. **For Gurobi:**
         1. Make an account on Gurobi using your University email ID. The link to the page is [here](https://www.gurobi.com/).
