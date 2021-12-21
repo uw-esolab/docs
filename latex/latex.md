@@ -9,7 +9,7 @@
 
 ## Operating System(s) and requirements
 * Windows 10
-* The preferred LaTeX IDE is [VS Code](https://github.com/mjwagner2/esolab/blob/main/vscode/vscode.md)
+* The preferred LaTeX IDE is [VS Code](https://github.com/uw-esolab/docs/blob/main/vscode/vscode.md)
 
 ## Purpose
 * Install a LaTeX compiler using the MikTex distributable option, and configure VS Code to edit, compile, and view LaTeX documents.
@@ -18,12 +18,12 @@
 ## Templates and Examples
 
 
-* [Masters or PhD thesis](https://github.com/mjwagner2/esolab/tree/main/latex/template-thesis)
-* [Technical presentation](https://github.com/mjwagner2/esolab/tree/main/latex/template-presentation)
+* [Masters or PhD thesis](https://github.com/uw-esolab/docs/tree/main/latex/template-thesis)
+* [Technical presentation](https://github.com/uw-esolab/docs/tree/main/latex/template-presentation)
+* [Journal paper (MDPI)](https://github.com/uw-esolab/docs/tree/main/latex/template-journal-1)
 
 More to be provided soon...
 * Quarterly report for a funding agency
-* Journal paper
 * Homework writeup
 
 ## Procedure
@@ -36,7 +36,7 @@ More to be provided soon...
 
         ![](./image_001.png)
 
-    * The installer may prompt you for admin rights. [Elevate to admin]() to continue.
+    * The installer may prompt you for admin rights. [Elevate to admin](https://github.com/uw-esolab/docs/blob/main/admin/admin.md) to continue.
     
         ![](./image_002.png)
 
@@ -69,7 +69,7 @@ More to be provided soon...
     * Search for "latex". Install LaTeX Workshop
         ![](./image_010.png)
 
-    * Open a LaTeX file such as [this minimal example](https://github.com/mjwagner2/esolab/blob/main/latex/mwe.tex). 
+    * Open a LaTeX file such as [this minimal example](https://github.com/uw-esolab/docs/blob/main/latex/mwe.tex). 
 
     * Type ``CTRL+ALT+B`` to build the document. The build may take a few moments the first time as the MikTex package manager updates packages. You should be connected to the internet the first time you build or when using packages that have not been imported before. When building, a small cycling circle will appear on the status bar at the bottom of the window.
 
