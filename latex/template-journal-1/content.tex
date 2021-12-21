@@ -1,0 +1,228 @@
+
+%\section{How to Use this Template}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{how to use}
+
+%\subsection{Subsection}
+%Citing a journal paper \cite{wagner2017optimization} . Now citing a book reference \cite{blair2005sam} or other reference types \cite{hirsch2011standardization}. \cite{nellis_klein_2008}
+%\subsubsection{Subsubsection}
+
+%Bulleted lists look like this:
+%\begin{itemize}
+%\item	First bullet;
+%\item	Second bullet;
+%\item	Third bullet.
+%\end{itemize}
+
+%Numbered lists can be added as follows:
+%\begin{enumerate}
+%\item	First item; 
+%\item	Second item;
+%\item	Third item.
+%\end{enumerate}
+
+%The text continues here. 
+
+%\subsection{Figures, Tables and Schemes}
+
+%All figures and tables should be cited in the main text as Figure~\ref{fig1}, Table~\ref{tab1}, etc.
+
+%\begin{figure}[H]
+%\includegraphics[width=10.5 cm]{Definitions/logo-mdpi}
+%\caption{This is a figure. Schemes follow the same formatting. If there are multiple panels, they should be listed as: (\textbf{a}) Description of what is contained in the first panel. (\textbf{b}) Description of what is contained in the second panel. Figures should be placed in the main text near to the first time they are cited. A caption on a single line should be centered.\label{fig1}}
+%\end{figure}   
+
+% The MDPI table float is called specialtable
+%\begin{specialtable}[htbp] 
+%\caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.\label{tab1}}
+%%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
+%\begin{tabular}{ccc}
+%\toprule
+%\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+%\midrule
+%Entry 1		& Data			& Data\\
+%Entry 2		& Data			& Data\\
+%\bottomrule
+%\end{tabular}
+%\end{specialtable}
+
+%\begin{listing}[H]
+%\caption{Title of the listing}
+%\rule{\columnwidth}{1pt}
+%\raggedright Text of the listing. In font size footnotesize, small, or normalsize. Preferred format: left aligned and single spaced. Preferred border format: top border line and bottom border line.
+%\rule{\columnwidth}{1pt}
+%\end{listing}
+
+%\subsection{Formatting of Mathematical Components}
+
+%This is the example 1 of equation:
+%\begin{equation}
+%a = 1,
+%\end{equation}
+
+%the text following an equation need not be a new paragraph. Please punctuate equations as regular text.
+%% If the documentclass option "submit" is chosen, please insert a blank line before and after any math environment (equation and eqnarray environments). This ensures correct linenumbering. The blank line should be removed when the documentclass option is changed to "accept" because the text following an equation should not be a new paragraph.
+
+%This is the example 2 of equation:
+%\end{paracol}
+%\nointerlineskip
+%\begin{eqnarray}
+%a &=& b + c + d + e + f + g + h + i + j + k + l\nonumber \\
+% &+& m + n + o + p + q + r + s + t + u + v + w + x + y + z %\nonumber
+%\end{eqnarray}
+
+% Example of a figure that spans the whole page width (the commands \widefigure and \begin{paracol}{2}, \linenumbers, and\switchcolumn need to be present). The same concept works for tables, too.
+%\begin{figure}[H]	
+%\widefigure
+%\includegraphics[width=15 cm]{Definitions/logo-mdpi}
+%\caption{This is a wide figure.\label{fig2}}
+%\end{figure} 
+
+
+
+
+
+%\begin{paracol}{2}
+%\linenumbers
+%\switchcolumn
+%Please punctuate equations as regular text. Theorem-type environments (including propositions, lemmas, corollaries etc.) can be formatted as follows:
+%% Example of a theorem:
+%\begin{Theorem}
+%Example text of a theorem.
+%\end{Theorem}
+
+%The text continues here. Proofs must be formatted as follows:
+
+%% Example of a proof:
+%\begin{proof}[Proof of Theorem 1]
+%Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear which theorem is being referred to.
+%\end{proof}
+%The text continues here.
+
+%\end{paracol}
+
+
+
+
+%The template details the sections that can be used in a manuscript. Note that the order and names of article sections may differ from the requirements of the journal (e.g., the positioning of the Materials and Methods section). Please check the instructions on the authors' page of the journal to verify the correct order and names. For any questions, please contact the editorial office of the journal or support@mdpi.com. For LaTeX-related questions please contact latex@mdpi.com.
+%The order of the section titles is: Introduction, Materials and Methods, Results, Discussion, Conclusions for these journals: aerospace,algorithms,antibodies,antioxidants,atmosphere,axioms,biomedicines,carbon,crystals,designs,diagnostics,environments,fermentation,fluids,forests,fractalfract,informatics,information,inventions,jfmk,jrfm,lubricants,neonatalscreening,neuroglia,particles,pharmaceutics,polymers,processes,technologies,viruses,vision
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+The introduction should briefly place the study in a broad context and highlight why it is important. It should define the purpose of the work and its significance. The current state of the research field should be reviewed carefully and key publications cited. Please highlight controversial and diverging hypotheses when necessary. Finally, briefly mention the main aim of the work and highlight the principal conclusions. As far as possible, please keep the introduction comprehensible to scientists outside your particular field of research.  %Please use the command \citep{} for the following MDPI journals, which use author--date citation: Administrative Sciences, Arts, Econometrics, Economies, Genealogy, Histories, Humanities, IJFS, Journal of Intelligence, Journalism and Media, JRFM, Languages, Laws, Religions, Risks, Social Sciences.
+
+
+\subsection{Review of Related Work}
+
+Discuss existing literature that is related to your work, covering both those sources that you built upon and any work that could be conceived as closely related. Discuss differences in assumptions, methodology, or results that make your work distinct.
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and Methods}
+
+Materials and Methods should be described with sufficient details to allow others to replicate and build on published results. 
+
+When annotating, we will use the \texttt{changes} package. This allows for redlining and commenting on draft text. There are \replaced{a bunch of}{several} commands that are useful. \comment[id=MW]{Specify the name of each command!}. These include the ``replaced,'' ``comment,'' and ``deleted'' commands. \deleted{I wish I learned \LaTeX{} sooner}.
+
+% **************************************
+
+
+\subsection{Subsection name}
+
+\lipsum[3-4]
+
+Equation~\ref{eq-black} shows a heat exchanger energy balance \cite{blair2018system}. 
+
+\begin{equation}
+    \label{eq-black}
+    \dot{m} \cdot h_{in} + \dot{Q}_{HX} = \dot{m} \cdot h_{out} ,
+\end{equation}
+
+\lipsum[5]
+
+\begin{figure}[h]
+    \widefigure
+    \includegraphics[width=10 cm]{figures/esolab-logo.png}
+    \caption{ESOLab logo \label{esolab}}
+\end{figure}
+
+\lipsum[6]
+
+\end{paracol}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/logo.png}
+    \caption{UW logo taking the full page width}
+    \label{uw-logo}
+\end{figure}
+
+\begin{paracol}{2}
+    \linenumbers
+    \switchcolumn
+
+    \lipsum[7]
+
+
+\begin{specialtable}[H] 
+    %[htbp]
+    \caption{Standardized constant cycle parameters with definition, variable and set value. \label{tab-cycle-constants}}
+    \begin{tabular}{L{0.5\linewidth}cc}
+    \toprule
+    \textbf{Parameter} & \textbf{Variable}	& \textbf{Design Point Value}\\
+    \midrule
+    \textit{Efficiencies}\\
+    Main Compressor & $\eta_{MC}$		& 0.91 (-)\\
+    Re-Compressor & $\eta_{RC}$		& 0.89 (-)\\
+    Turbine & $\eta_{T}$		& 0.90 (-)\\
+    Pumps 1-3 & $\eta_{P}$      & 0.90 (-)\\
+    \midrule
+    \textit{Approach Temperatures}\\
+    Low Temperature Recuperator & $\delta_{LTR}$		& 10 ($^{\circ}$C)\\
+    High Temperature Recuperator & $\delta_{HTR}$		& 10 ($^{\circ}$C)\\
+    Concentrating Solar Power Heat Exchanger & $\delta_{CSPHX}$	& 10 ($^{\circ}$C)\\
+    \midrule
+    \textit{Pressures}\\
+    Pressure Ratio & $PR$ & 3.27 (-)\\
+    High Side Pressure & $P_{2A}$ & 28.8 (MPa)\\
+    \midrule
+    \textit{Heat Into System}\\
+    Lead-Cooled Fast Reactor Heat Transfer & $\dot{Q}_{LFRHX}$ & 950 (MW)\\
+    Concentrating Solar Power Heat Transfer & $\dot{Q}_{CSP}$ & 750 (MW)\\
+    \midrule
+    \textit{Temperature}\\
+    Main Compressor Inlet & $T_{1A}$ & 40 ($^{\circ}$C)\\
+    Lead-Cooled Fast Reactor sCO$_{2}$ High Temperature & $T_{5}$,$T_{2C}$,$T_{6A}$,$T_{5C}$ & 595 ($^{\circ}$C)\\
+    \midrule
+    \textit{Pumps}\\
+    Pressure Rise Across Pump & $\Delta_{P}$ & 3.726 (MPa)\\
+    Pump Low Side Pressure & $P_{S5-B}$ & 3 (MPa)\\ 
+    \bottomrule
+    \end{tabular}
+\end{specialtable}
+
+\lipsum[8]
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results and Discussion}
+
+\lipsum[9-10]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+\lipsum[11-12]
+
+
+
+
+% ----------------------------------------------------------
+\end{paracol}
+
