@@ -4,8 +4,39 @@
 
 | Last update | Author         | Notes or changes                    |
 |-------------|----------------|-------------------------------------|
+| 2022/07/08  | Wagner         | Adding learning resources           |
 | 2020/10/14  | Wagner         | Moving to markdown format           |
 | 2020/10/13  | Springate      | Initial creation                    |
+
+## Learning resources
+Once you've installed Python following the procedure outlined below, you may find the following resources useful in learning Python and its common packages:
+
+* General text on programming with Python used as the language of implementation: [Think Python](https://greenteapress.com/wp/think-python-2e/)
+
+The following packages are used by ESOLab students roughly in order of most common usage:
+| Package   |   Description                                             |
+|-----------|-----------------------------------------------------------|
+| matplotlib| general purpose plotting and visualizaiton library        |
+| numpy     | matrix and mathematical functions and operations          |
+| pandas    | dataframe manipulations (think 'Excel' for Python)        |
+| scipy     | algorithms for optimization, statistics, matrix inversion |
+|           | _scipy.optimize_: function minimization and root finding    |
+|           | _scipy.sparse_: tools for sparse matrix manipulation        |
+|           | _scipy.sparse.linalg.spsolve_: sparse matrix inversion      |
+| jupyter   | web-based interactive notebook for running python code    | 
+| plotly    | browser-based interactive plotting and visualization      |
+| multiprocessing| allows running processes in parallel                 | 
+| pyomo     | optimization modeling language for interfacing with commercial or open-source solvers | 
+| pvlib     | models of solar PV, sun position, clear sky irradiance    |
+| scikit-learn | machine learning toolkit for python                    | 
+| tslearn   | machine learning for time series data                     |
+| pytorch   | deep learning using GPU and CPU processing                |
+| iapws     | accurate steam properties from IAPWS                      |
+| pint      | engineering unit management and conversion                | 
+| django    | a toolkit for website development                         |
+|||
+|||
+
 
 
 ## Operating System(s) and requirements
