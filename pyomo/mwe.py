@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 model = pyomo.ConcreteModel()
 
 # Time series
-model.nt = pyomo.Param(initialize = 20)
+model.nt = pyomo.Param(initialize = 20000)
 model.T = pyomo.Set(initialize = range(model.nt()))
 
 # Create some random input data
@@ -46,11 +46,18 @@ def f_y_x0(model, t):
     return model.y[t] <= model.X_in[t] / model.X0
 model.c_y_x0 = pyomo.Constraint(model.T, rule = f_y_x0)
 
+def n_active(model):
+    return sum(model.y[:]) <= 100
+model.c_n_active = pyomo.Constraint(rule = n_active)
+
 # ------ solve and print out results
 #solver setup
 #solver = pyomo.SolverFactory('glpk')
 solver = pyomo.SolverFactory('cbc')
-res = solver.solve(model)
+solver.options['sec'] = 5
+# solver.options['threads'] = 4
+# res = solver.solve(model, options={"sec":15}, tee=True)
+res = solver.solve(model, tee=True)
 
 print(res)
 print(model.objective())
@@ -69,9 +76,10 @@ for t in model.T:
             outs.append(model.__getattribute__(o)[t]() )
         except:
             outs.append(model.__getattribute__(o)[t] )
-    print( fmt.format(*([t]+outs)) )
+    # print( fmt.format(*([t]+outs)) )
 
-plt.plot([mt for mt in model.T], [mx() for mx in model.x.values()], \
-         [mt for mt in model.T], [mx for mx in model.X_in.values()], \
-         [0, model.nt()], [model.X0(), model.X0()], 'r--')
+plt.plot(\
+    [mt for mt in model.T], [mx for mx in model.X_in.values()], \
+    [mt for mt in model.T], [mx() for mx in model.x.values()], \
+    [0, model.nt()], [model.X0(), model.X0()], 'r--')
 plt.show()
