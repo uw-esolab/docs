@@ -177,7 +177,7 @@ Configure Python 3+ installed on a local machine to be used with Pyomo, which is
         print( fmt.format(*([t]+outs)) )
 
     plt.plot([mt for mt in model.T], [mx() for mx in model.x.values()], \
-            [mt for mt in model.T], [mx for mx in model.X_in.values()], \)
+            [mt for mt in model.T], [mx for mx in model.X_in.values()], \
             [0, model.nt()], [model.X0(), model.X0()], 'r--')
     plt.show()
     ```
